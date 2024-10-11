@@ -2,18 +2,15 @@
 
 """Defines a type-annotated function safely_get_value."""
 
-from typing import Mapping, Any, TypeVar, Union, Optional
+from typing import Mapping, Any, Union, TypeVar
 
-T = TypeVar('T')
+T = TypeVar("T")
 
 
 def safely_get_value(
-    dct: Mapping[Any, Any], key: Any, default: Optional[T] = None
+    dct: Mapping, key: Any, default: Union[T, None] = None
 ) -> Union[Any, T]:
-    """
-    Safely gets the value from a dictionary for a given key,
-    or returns a default value.
-    """
+    """Returns the value of a key in a dictionary."""
     if key in dct:
         return dct[key]
     else:
