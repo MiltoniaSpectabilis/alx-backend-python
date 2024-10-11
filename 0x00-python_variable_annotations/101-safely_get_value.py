@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 
-"""Defines a type-annotated function safely_get_value."""
-
 from typing import Mapping, Any, TypeVar, Union, Optional
 
 T = TypeVar('T')
+
+"""Defines a type-annotated function safely_get_value."""
 
 
 def safely_get_value(dct: Mapping[Any, Any], key: Any,
