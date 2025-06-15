@@ -1,11 +1,13 @@
 #!/usr/bin/env python3
-""""""
+"""
+This module contains a function that zooms an array
+"""
 
 from typing import Tuple, List
 
 
 def zoom_array(lst: Tuple, factor: int = 2) -> List:
-    """"""
+    """Returns zoomed in array"""
     zoomed_in: List = [
         item for item in lst
         for i in range(factor)
